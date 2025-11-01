@@ -104,15 +104,22 @@
                 <li>Integrated FastAPI backend to fetch device data and send commands for relay control, frequency setting, OTA updates, device status, and dashboard theme</li>
             </ul>
           </div>
+          <!-- START OF MODIFIED CARD with Buttons -->
           <div class="card hidden">
-            <h3>Smartplug User Dashboard</h3>
-            <img src="images/userDashboard01.png" alt="Smartplug User Dashboard 01">
-            <!-- <img src="images/userDashboard02.png" alt="Smartplug User Dashboard 02"> -->
+            <h3>Smartplug Management Dashboard</h3>
+            <div class="image-carousel-management">
+                <img class="carousel-image active" src="images/managementDashboard01.png" alt="Smartplug User Dashboard 01">
+                <img class="carousel-image" src="images/managementDashboard02.png" alt="Smartplug User Dashboard 02">
+                <!-- Manual Navigation Buttons -->
+                <button class="prev-btn" aria-label="Previous image">❮</button>
+                <button class="next-btn" aria-label="Next image">❯</button>
+            </div>
             <ul>
               <li>Developed an IoT monitoring and control dashboard for University of Georgia Facilities Management Division using HTML, CSS, and JavaScript to manage smart plug devices </li>
               <li>Implemented a comprehensive smartplug management system featuring device status control, real-time monitoring, interactive map visualization, alert system, automated scheduling, version control, and energy usage projection</li>
             </ul>
           </div>
+          <!-- END OF MODIFIED CARD -->
           <div class="card hidden">
             <h3>Website Developer</h3>
             <img src="images/websiteDeveloper.png" alt="Website Developer">
@@ -150,7 +157,7 @@
     document.querySelector('header h1'),
     document.querySelector('header img'),
     document.querySelector('.address'),
-    ...document.querySelectorAll('.tagline'), // FIXED: Changed to querySelectorAll
+    ...document.querySelectorAll('.tagline'),
     ...document.querySelectorAll('section h2'),
     ...document.querySelectorAll('section dl'),
     ...document.querySelectorAll('section ul'),
@@ -182,6 +189,48 @@
   animatedElements.forEach(el => {
     if (el) observer.observe(el);
   });
+  
+  // --- Start of Manual Image Carousel Logic ---
+
+  document.addEventListener('DOMContentLoaded', () => {
+      const carousel = document.querySelector('.image-carousel-management');
+      if (!carousel) return; 
+
+      const images = carousel.querySelectorAll('.carousel-image');
+      const prevBtn = carousel.querySelector('.prev-btn');
+      const nextBtn = carousel.querySelector('.next-btn');
+      let currentIndex = 0;
+
+      function updateCarousel() {
+          images.forEach((img, index) => {
+              img.classList.remove('active');
+          });
+          // Set the image at the current index to active
+          images[currentIndex].classList.add('active');
+      }
+
+      // Logic for previous button click
+      prevBtn.addEventListener('click', () => {
+          // Decrement index, wrapping around to the end if necessary
+          currentIndex = (currentIndex - 1 + images.length) % images.length;
+          updateCarousel();
+      });
+
+      // Logic for next button click
+      nextBtn.addEventListener('click', () => {
+          // Increment index, wrapping around to the start if necessary
+          currentIndex = (currentIndex + 1) % images.length;
+          updateCarousel();
+      });
+      
+      // Ensure the carousel works even if there's only one image
+      if (images.length <= 1) {
+          prevBtn.style.display = 'none';
+          nextBtn.style.display = 'none';
+      }
+  });
+
+  // --- End of Manual Image Carousel Logic ---
 </script>
 
 
