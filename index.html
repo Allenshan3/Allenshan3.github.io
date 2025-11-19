@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Allen Shan</title>
+  </head>
+  <body>
+    <nav>
+      <p class="site-name"><a href="index.html">Home</a></p>
+      <p>
+        <a href="contact.html" aria-label="Contact Allen Shan">Contact</a>
+        &nbsp;|&nbsp;
+        <a href="https://www.linkedin.com/in/allenshan/" target="_blank" rel="noopener noreferrer" aria-label="Allen Shan LinkedIn">LinkedIn</a>
+      </p>
+    </nav>
+
+    <header>
+      <div>
+        <h1 class="hidden">Fengwei (Allen) Shan</h1>
+        <p class="address hidden">&bull; Cumming, GA 30041 &bull; allenfengwei@gmail.com</p> 
+        <div class="tagline-container">
+            <p class="tagline hidden">Computer Science @ University of Georgia</p>
+            <p class="tagline hidden">Research Assistant @ SensorWeb Research Lab</p>
+        </div>
+      </div>
+      <img src="images/image.jpeg" alt="Headshot" class="hidden">
+    </header>
+    
+    <main>
+      <section aria-labelledby="education">
+        <h2 id="education">Education</h2>
+        <dl class="hidden">
+          <dt>University of Georgia</dt>
+          <dd>Expected: May 2027</dd>
+          <dt>Bachelor of Science in Computer Science & Minor in Business</dt>
+          <dd>Dean's List: Fall 2023</dd>
+        </dl>
+      </section>
+      
+      <section aria-labelledby="skills">
+        <h2 id="skills">Skills</h2>
+        <ul class="hidden">
+          <li>Programming & Markup Languages: Java, C, C++, Python, HTML, JavaScript, CSS, TypeScript</li>
+          <li>Frameworks & Libraries: React.js, Java Spring Boot, JSON, REST API, GUI, Spring Interceptor, JavaFX</li>
+          <li>Tools & Platforms: Docker, Postman, ThingsBoard, Emacs, Jenkins, Swagger</li>
+          <li>DevOps & Backend: MongoDB, Node.js, Microservices, Multithreading, Distributed Lock, AWS, Kubernetes, Redis Cluster, Kafka, JWT, MySQL</li>
+          <li>Operating Systems: Linux, Unix</li>
+          <li>Languages: English, Chinese</li>
+        </ul>
+      </section>
+      
+      <section aria-labelledby="experience">
+    <h2 id="experience">Work Experience</h2>
+    <dl class="hidden">
+        <!-- Position and Company -->
+        <dt>Research Assistant</dt>
+        <dd class="company">UGA SensorWeb Research Laboratory</dd>
+        <dd class="timeframe">Jan 2024 - Present</dd>
+        
+        <!-- Bullet Points -->
+        <dd class="bullet-point">Developed an interactive full-stack smartplug user management dashboard for UGA Facilities Management Division to manage electric vehicle charging, featuring real-time device monitoring, version and status control, alert systems, automated scheduling, energy estimation, and map visualization using HTML, CSS, JavaScript, ThingsBoard, and FastAPI. </dd>
+        <dd class="bullet-point">Engineered a custom full-stack IoT control dashboard on ThingsBoard for real-time device monitoring/control and integrated a FastAPI backend to handle device relay control, frequency setting, OTA updates, and system theming</dd>
+        <dd class="bullet-point">Updated and enhanced the lab's website using WordPress by adding a personalized achievements page, updated project descriptions and team page, and improved the homepage with visuals from conferences and prior projects</dd>
+        <dd class="bullet-point">Collected and analyzed heart rate, respiration rate, and blood pressure data, comparing metrics with BedDot, a contactless IoT health monitoring device, for accuracy and performance evaluation</dd>
+        
+        <!-- Position and Company -->
+        <dt>Software Engineer Intern</dt>
+        <dd class="company">Eth Tech</dd>
+        <dd class="timeframe">December 2024 - May 2025</dd>
+        
+        <!-- Bullet Points -->
+        <dd class="bullet-point">Designed and implemented REST API endpoints for payment and notification services using Java Spring Boot, integrating MySQL via Spring JPA with a custom database schema</dd>
+        <dd class="bullet-point">Utilized Kafka for asynchronous communication between microservices, including passenger, driver, and order services, following a microservice architecture</dd>
+        <dd class="bullet-point">Developed an authentication system using Spring Interceptor and JWT, ensuring a secure access across services</dd>
+        <dd class="bullet-point">Integrated Google Map Direction API to calculate routes and configured a Redis cluster for cashing, boosting performance under high-concurrency traffic with distributed locking mechanisms</dd>
+        <dd class="bullet-point">Deployed project on AWS using S3, EC2, RDS, Elastic Load Balancing and CloudFront for scalable cloud infrastructure</dd>
+        <dd class="bullet-point">Automated CI/CD processes with GitHub hooks, Jenkins pipelines, and Docker in a linux environment, managing system orchestration with Kubernetes</dd>
+        <dd class="bullet-point">Documented APIs with Swagger, performed functional testing with Postman, and conducted load testing with JMEter to ensure system reliability and performance</dd>
+        
+        <!-- Position and Company -->
+        <dt>AI Researcher Intern</dt>
+        <dd class="company">GCL New Energy, Ltd.</dd>
+        <dd class="timeframe">May 2024 - Jun 2024</dd>
+        
+        <!-- Bullet Points -->
+        <dd class="bullet-point">Researched the application of LLMs in the new energy sector, identifying opportunities to optimize energy systems</dd>
+        <dd class="bullet-point">Analyzed challenges and opportunities of integrating AI into new energy tech and power grids to enhance performance</dd>
+        <dd class="bullet-point">Collaborated with partner business in Hangzhou on AI-related investment projects, contributing to strategic development and innovation in the energy sector</dd>
+    </dl>
+</section>
+      
+      <section aria-labelledby="projects">
+        <h2 id="projects">Projects</h2>
+        <div class="three-col">
+          <div class="card hidden">
+            <h3>Cache & Connect</h3>
+            <div class="image-carousel-management">
+                <img class="carousel-image active" src="images/cache&ConnectHome.png" alt="Cache & Connect Homepage">
+                <img class="carousel-image" src="images/cache&ConnectView.png" alt="Cache & Connect Authenticated">
+                <!-- Manual Navigation Buttons -->
+                <button class="prev-btn" aria-label="Previous image">❮</button>
+                <button class="next-btn" aria-label="Next image">❯</button>
+            </div>
+            <ul>
+                <li>Developed a full-stack community platform using React + Next.js, Node.js, and MongoDB to enable users to discover, schedule, and share hiking trails and geocaching locations in Athens, GA</li>
+                <li>Architected responsive, user-centric interface with Leaflet interactive map integration and dynamic navigation</li>
+                <li>Implemented authentication & authorization system with login/sign-up functionality and protected routes using Next.js App Router and middleware for secure user access</li>
+                <li>Designed CRUD operations for managing outdoor events and activities through a MongoDB database with Mongoose schemas, allowing users to create, edit, and delete personalized event listings</li>
+                <li>Built responsive UI with Tailwind CSS and custom styling ensuring cross-device compatibility and accessibility for desktop and mobile users</li>
+                <li>Collaborated in an agile team environment as project leader, coordinating with 3 team members on feature development, code reviews, and weekly project milestones</li>
+            </ul>
+          </div>
+
+         <!-- START OF MODIFIED CARD with Buttons -->
+          <div class="card hidden">
+            <h3>Smartplug Management Dashboard</h3>
+            <div class="image-carousel-management">
+                <img class="carousel-image active" src="images/managementDashboard01.png" alt="Smartplug User Dashboard Homepage">
+                <img class="carousel-image" src="images/managementDashboard02.png" alt="Smartplug User Dashboard Smartplug State">
+                <!-- Manual Navigation Buttons -->
+                <button class="prev-btn" aria-label="Previous image">❮</button>
+                <button class="next-btn" aria-label="Next image">❯</button>
+            </div>
+            <ul>
+              <li>Engineered an IoT Smart Plug Management Dashboard on ThingsBoard for the University of Georgia Facilities Management Department, centralizing real-time device control and data visualization</li>
+              <li>Developed custom front-end widgets using HTML, CSS, and JavaScript to tailor the user interface, enhancing operator experience for the smart plug system</li>
+              <li>Implemented core control logic, including bidirectional Remote Procedure Calls (RPC) for instant device switching and a custom smart plug scheduling utility</li>
+              <li>Architected and managed a real-time data ingestion pipeline, configuring time-series telemetry to display instantaneous power draw and historical energy consumption</li>
+              <li>Integrated an interactive, location-aware map visualization layer for all deployed devices, enabling quick, context-based access to controls and status</li>
+              <li>Established an automated, rule-based alarm and notification system to alert users to critical conditions, such as high energy spikes or system inactivity</li>
+
+            </ul>
+          </div>
+
+          <div class="card hidden">
+            <h3>Smartplug Control Dashboard</h3>
+            <img src="images/controlDashboard.png" alt="Smartplug Control Dashboard">
+            <ul>
+                <li>Created a custom IoT device management dashboard using HTML, CSS, and JavaScript on ThingsBoard to monitor and control smart plug devices</li>
+                <li>Integrated FastAPI backend to fetch device data and send commands for relay control, frequency setting, OTA updates, device status, and dashboard theme</li>
+            </ul>
+          </div>
+ 
+          <!-- END OF MODIFIED CARD -->
+          <div class="card hidden">
+            <h3>Website Developer</h3>
+            <img src="images/websiteDeveloper.png" alt="Website Developer">
+            <ul>
+              <li>Utilized WordPress features such as Pages and Custom Post Types for structured data like Team Members and Publications, enhanced with custom fields for bios, links, and abstracts</li>
+              <li>Developed a custom theme to create a unique, fully-responsive design focused on clean UI/UX principles, and integrated key plugins for forms</li>
+            </ul>
+          </div>
+
+          <div class="card hidden">
+            <h3>iTunes Media Gallery</h3>
+            <img src="images/galleryApp.png" alt="iTunes Media Gallery">
+            <ul>
+              <li>Developed a JavaFX application with a responsive GUI that uses HTTP client operations to query the iTunes Search API and display image galleries based on user-defined search criteria</li>
+              <li>Engineered a multi-threaded architecture to handle concurrent HTTP requests and JSON parsing with Gson, ensuring a non-blocking UI with a progress bar and robust error handling for a seamless user experience</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        <i class="fa-solid fa-copyright"></i> 2025 
+        <a href="contact.html">Contact</a> &nbsp;|&nbsp;
+        <a href="https://www.linkedin.com/in/allenshan/" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+      </p>
+    </footer>
+
+   <script>
+  // Elements to animate on scroll
+  const animatedElements = [
+    document.querySelector('header h1'),
+    document.querySelector('header img'),
+    document.querySelector('.address'),
+    ...document.querySelectorAll('.tagline'),
+    ...document.querySelectorAll('section h2'),
+    ...document.querySelectorAll('section dl'),
+    ...document.querySelectorAll('section ul'),
+    ...document.querySelectorAll('.card')
+  ];
+
+  // Assign initial hidden state
+  animatedElements.forEach(el => {
+    if (el) el.classList.add('hidden');
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove('hidden');
+        if (entry.target.matches('header h1')) entry.target.classList.add('reveal-up');
+        if (entry.target.matches('header img')) entry.target.classList.add('reveal-up');
+        if (entry.target.matches('.address')) entry.target.classList.add('reveal-left');
+        if (entry.target.matches('.tagline')) entry.target.classList.add('reveal-right');
+        if (entry.target.matches('section h2')) entry.target.classList.add('reveal-left');
+        if (entry.target.matches('section dl, section ul, .card')) entry.target.classList.add('reveal-up');
+      } else {
+        entry.target.classList.add('hidden');
+        entry.target.classList.remove('reveal-up', 'reveal-left', 'reveal-right');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  animatedElements.forEach(el => {
+    if (el) observer.observe(el);
+  });
+  
+  // --- Start of Manual Image Carousel Logic with Auto-rotation ---
+
+  document.addEventListener('DOMContentLoaded', () => {
+      const carousels = document.querySelectorAll('.image-carousel-management');
+      
+      carousels.forEach(carousel => {
+          const images = carousel.querySelectorAll('.carousel-image');
+          const prevBtn = carousel.querySelector('.prev-btn');
+          const nextBtn = carousel.querySelector('.next-btn');
+          let currentIndex = 0;
+          let autoRotateInterval;
+          const autoRotateDelay = 5000; // seconds
+
+          function updateCarousel() {
+              images.forEach((img, index) => {
+                  img.classList.remove('active');
+              });
+              // Set the image at the current index to active
+              images[currentIndex].classList.add('active');
+          }
+
+          function startAutoRotate() {
+              autoRotateInterval = setInterval(() => {
+                  currentIndex = (currentIndex + 1) % images.length;
+                  updateCarousel();
+              }, autoRotateDelay);
+          }
+
+          function resetAutoRotate() {
+              clearInterval(autoRotateInterval);
+              startAutoRotate();
+          }
+
+          // Logic for previous button click
+          prevBtn.addEventListener('click', () => {
+              // Decrement index, wrapping around to the end if necessary
+              currentIndex = (currentIndex - 1 + images.length) % images.length;
+              updateCarousel();
+              resetAutoRotate();
+          });
+
+          // Logic for next button click
+          nextBtn.addEventListener('click', () => {
+              // Increment index, wrapping around to the start if necessary
+              currentIndex = (currentIndex + 1) % images.length;
+              updateCarousel();
+              resetAutoRotate();
+          });
+          
+          // Ensure the carousel works even if there's only one image
+          if (images.length <= 1) {
+              prevBtn.style.display = 'none';
+              nextBtn.style.display = 'none';
+          } else {
+              // Start auto-rotation only if there are multiple images
+              startAutoRotate();
+          }
+      });
+  });
+
+  // --- End of Manual Image Carousel Logic with Auto-rotation ---
+</script>
+
+
+  </body>
+</html>

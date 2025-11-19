@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Contact Allen Shan</title>
+  </head>
+  <body>
+    <nav>
+      <p class="site-name"><a href="index.html">Home</a></p>
+      <p>
+        <a href="contact.html" aria-label="Contact Allen Shan">Contact</a>
+        &nbsp;|&nbsp;
+        <a href="https://www.linkedin.com/in/allenshan/" target="_blank" rel="noopener noreferrer" aria-label="Allen Shan LinkedIn">LinkedIn</a>
+      </p>
+    </nav>
+
+    <header>
+      <div>
+        <h1 class="hidden">Contact Allen Shan</h1>
+        <p class="address hidden">&bull; Cumming, GA 30041 &bull; p(678) 860-1831 &bull; allenfengwei@gmail.com</p> 
+      </div>
+    </header>
+    
+    <main>
+      <section aria-labelledby="contact-form">
+        <h2 id="contact-form" class="hidden">Get In Touch</h2>
+        <div class="one-col hidden">
+          <form id="contactForm" action="https://formsubmit.co/allenfengwei@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New contact form submission from portfolio">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+        </div>
+      </section>
+      
+      <section aria-labelledby="direct-contact" class="hidden">
+        <h2 id="direct-contact">Direct Contact</h2>
+        <div class="contact-methods">
+          <div class="contact-method">
+            <i class="fa-solid fa-envelope"></i>
+            <h3>Email</h3>
+            <p><a href="mailto:allenfengwei@gmail.com">allenfengwei@gmail.com</a></p>
+          </div>
+          <div class="contact-method">
+            <i class="fa-solid fa-phone"></i>
+            <h3>Phone</h3>
+            <p><a href="tel:6788601831">(678) 860-1831</a></p>
+          </div>
+          <div class="contact-method">
+            <i class="fa-brands fa-linkedin"></i>
+            <h3>LinkedIn</h3>
+            <p><a href="https://www.linkedin.com/in/allenshan/" target="_blank" rel="noopener noreferrer">Connect with me</a></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        <i class="fa-solid fa-copyright"></i> 2025 
+        <a href="contact.html">Contact</a> &nbsp;|&nbsp;
+        <a href="https://www.linkedin.com/in/allenshan/" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+      </p>
+    </footer>
+
+    <script>
+      // Elements to animate on scroll
+      const animatedElements = [
+        document.querySelector('header h1'),
+        document.querySelector('.address'),
+        document.querySelector('.tagline'),
+        document.querySelector('section h2'),
+        document.querySelector('.one-col'),
+        document.querySelector('.contact-methods')
+      ];
+
+      // Assign initial hidden state
+      animatedElements.forEach(el => {
+        if (el) el.classList.add('hidden');
+      });
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove('hidden');
+            if (entry.target.matches('header h1')) entry.target.classList.add('reveal-up');
+            if (entry.target.matches('.address')) entry.target.classList.add('reveal-left');
+            if (entry.target.matches('.tagline')) entry.target.classList.add('reveal-right');
+            if (entry.target.matches('section h2')) entry.target.classList.add('reveal-left');
+            if (entry.target.matches('.one-col, .contact-methods')) entry.target.classList.add('reveal-up');
+          } else {
+            entry.target.classList.add('hidden');
+            entry.target.classList.remove('reveal-up', 'reveal-left', 'reveal-right');
+          }
+        });
+      }, { threshold: 0.2 });
+
+      animatedElements.forEach(el => {
+        if (el) observer.observe(el);
+      });
+      
+      // Form submission handling
+      document.getElementById('contactForm').addEventListener('submit', function(e) {
+        const submitBtn = this.querySelector('.submit-btn');
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+        submitBtn.disabled = true;
+        
+        // Let FormSubmit handle the actual submission
+      });
+    </script>
+
+  </body>
+</html>
